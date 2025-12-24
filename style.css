@@ -1,0 +1,155 @@
+/* =====================================
+   Global Reset
+===================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================================
+   Page Layout
+===================================== */
+body {
+  background: #f4f6f8;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* =====================================
+   Card Grid
+===================================== */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* =====================================
+   Card
+===================================== */
+.card {
+  background: #ffffff;
+  width: 280px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================
+   Card Image
+===================================== */
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* =====================================
+   Card Text
+===================================== */
+.card h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* =====================================
+   Toggle Button
+===================================== */
+.toggle-btn {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: #0056b3;
+}
+
+/* =====================================
+   Expandable Details (Scrollable)
+===================================== */
+.extra-info {
+  max-height: 0;
+  opacity: 0;
+  overflow-y: auto;     /* enables scroll */
+  overflow-x: hidden;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.4;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.extra-info.show {
+  max-height: 280px;    /* scrollable height */
+  opacity: 1;
+}
+
+/* =====================================
+   Detail Text Spacing
+===================================== */
+.extra-info p {
+  margin-bottom: 6px;
+}
+
+/* =====================================
+   Scrollbar (Optional – subtle)
+===================================== */
+.extra-info::-webkit-scrollbar {
+  width: 6px;
+}
+
+.extra-info::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.extra-info::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* =====================================
+   Social Links
+===================================== */
+.social {
+  margin-top: 8px;
+}
+
+.social a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 13px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.social a:hover {
+  text-decoration: underline;
+}

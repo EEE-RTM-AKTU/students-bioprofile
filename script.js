@@ -22,12 +22,12 @@ fetch(`${SHEET_CSV_URL}&v=${Date.now()}`, { cache: "no-store" })
   });
 
 /* ---------------------------------- */
-.then(csvText => {
-  const students = parseCSV(csvText);
-  console.log("Total students:", students.length);
-  console.log("Last student:", students[students.length - 1]);
-  renderCards(csvText);
-})
+/* ---------------------------------- */ 
+function renderCards(csvText) { 
+   const students = parseCSV(csvText); 
+   container.innerHTML = ""; 
+   students.forEach(s => container.appendChild(createCard(s))); 
+}
 
 /* ---------------------------------- */
 function createCard(data) {

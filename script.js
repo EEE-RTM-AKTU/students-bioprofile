@@ -131,7 +131,9 @@ function parseCSV(text) {
 
   if (current.length) {
     row.push(current.trim());
-    rows.push(row);
+    if (row.some(cell => cell !== "")) {
+  rows.push(row);
+}
   }
 
   const headers = rows.shift().map(h => h.toLowerCase());

@@ -130,11 +130,9 @@ function parseCSV(text) {
   }
 
   if (current.length) {
-    row.push(current.trim());
-    if (row.some(cell => cell !== "")) {
+  row.push(current.trim());
   rows.push(row);
 }
-  }
 
   const headers = rows.shift().map(h => h.toLowerCase());
   return rows.map(r => {
